@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Classificação de Imagens Histopatológicas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #004080;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header img {
+            width: 200px;
+        }
+        h1 {
+            text-align: center;
+            color: #004080;
+        }
+        form-container {
+            width: 60%;
+            margin: 30px auto;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        input[type="file"] {
+            display: block;
+            margin: 0 auto 20px auto;
+            padding: 10px;
+            border: 2px solid #004080;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+        .upload-button {
+            background-color: #004080;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .upload-button:hover {
+            background-color: #00264d;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            display: flex; /* Exibir os elementos em linha */
+            justify-content: space-around; /* Espaçamento entre as imagens */
+        }
+        .container div {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='UFCG-Central-Selo-SemFundo.png') }}" alt="Logo UFCG">
+    </header>
+    <h1>Sistema de Classificação de Imagens Histopatológicas: Resultados</h1>
+    <div class="container">
+        <div>
+            <h2>Imagem Enviada</h2>
+            <img src="{{ url_for('static', filename='uploaded_images/' + uploaded_image) }}" alt="Imagem Enviada">
+        </div>
+        <div>
+            <h2>Imagem Pré-processada</h2>
+            <img src="{{ url_for('static', filename='processed_images/' + processed_image) }}" alt="Imagem Pré-processada">
+        </div>
+        <div>
+            <h2>Resultado da Previsão</h2>
+            <p>Classificação binária prevista: {{ predicted_class }}</p>
+        </div>
+    </div>
+</body>
+</html>
+
