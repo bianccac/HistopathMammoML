@@ -35,7 +35,7 @@ rsa
 six
 tensorboard
 tensorboard-data-server
-tensorflow==2.6.*
+tensorflow==2.7.*
 tensorflow-estimator
 tensorflow-io-gcs-filesystem
 termcolor
