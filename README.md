@@ -89,6 +89,4 @@ Este projeto está licenciado sob os termos da licença MIT. Consulte o arquivo 
 
 ## Contato
 
-Desenvolvido por [Biancca Cavalcante de Almeida Bezerra](https://github.com/bianccac).
-
 Se você tiver dúvidas ou quiser contribuir para o desenvolvimento deste projeto, sinta-se à vontade para entrar em contato!
